@@ -8,27 +8,37 @@
       "password": "password"
     }
   },
-  "languages": [
-    {
-      "id": "cxx",
-      "desc": "C/C++"
-    },
-    {
-      "id": "java",
-      "desc": "Java"
-    }
-  ],
-  "editors": [
-    {
-      "id": 1,
-      "name": "vscode",
-      "desc": "Visual Studio Code"
-    },
-    {
-      "id": 2,
-      "name": "atom",
-      "desc": "Atom"
-    }
-  ],
+  "languages": {
+    "data": [
+      {
+        "id": "cxx",
+        "desc": "C/C++"
+      }, {
+        "id": "java",
+        "desc": "Java"
+      }, {
+        "id": "javascript",
+        "desc": "JavaScript"
+      }, {
+        "id": "python",
+        "desc": "Python"
+      }],
+    "sign": "0"
+  },
+  "editors": {
+    "data": [
+      {
+        "id": 1,
+        "name": "vscode",
+        "desc": "Visual Studio Code"
+      },
+      {
+        "id": 2,
+        "name": "atom",
+        "desc": "Atom"
+      }
+    ],
+    "sign": "0"
+  },
   "build": []
 }
