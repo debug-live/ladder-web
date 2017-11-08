@@ -17,7 +17,7 @@ class LanguageList extends React.Component {
         this.props.axios.get('/api/languages').then(result => {
             if (result.status === 200) {
                 this.setState({
-                    languages: result.data,
+                    languages: result.data.data,
                 });
             }
         })
