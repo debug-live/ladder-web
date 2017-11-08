@@ -2,14 +2,7 @@
   "name": "web",
   "version": "0.1.0",
   "private": true,
-  "proxy": {
-    "/api": {
-      "target": "http://localhost:3333",
-      "pathRewrite": {
-        "^/api": ""
-      }
-    }
-  },
+  "proxy": "http://localhost:8000",
   "dependencies": {
     "axios": "^0.16.2",
     "bootstrap": "^4.0.0-alpha.6",
@@ -24,7 +17,7 @@
     "redux": "^3.7.2"
   },
   "scripts": {
-    "api-server": "[ -e db.json ] || cp -v db/db-sample.json db.json; json-server -p 3333 db.json",
+    "api-server": "cd data; [ -e db.json ] || cp -v db-sample.json db.json; json-server -p 8000 --routes routes.json db.json",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
