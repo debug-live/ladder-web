@@ -1,0 +1,36 @@
+{
+  "name": "web",
+  "version": "0.1.0",
+  "private": true,
+  "proxy": {
+    "/api": {
+      "target": "http://localhost:3333",
+      "pathRewrite": {
+        "^/api": ""
+      }
+    }
+  },
+  "dependencies": {
+    "axios": "^0.16.2",
+    "bootstrap": "^4.0.0-alpha.6",
+    "react": "^15.6.2",
+    "react-axios": "^1.0.3",
+    "react-dom": "^15.6.2",
+    "react-redux": "^5.0.6",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
+    "react-scripts": "1.0.14",
+    "reactstrap": "^5.0.0-alpha.3",
+    "redux": "^3.7.2"
+  },
+  "scripts": {
+    "api-server": "[ -e db.json ] || cp -v db/db-sample.json db.json; json-server -p 3333 db.json",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "json-server": "^0.12.0"
+  }
+}
