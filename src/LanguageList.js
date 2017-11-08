@@ -56,8 +56,8 @@ class LanguageList extends React.Component {
                 <ListGroup>
                 {
                     languages.map(lang => (
-                        <ListGroupItem key={lang.desc}>
-                            <Input type="checkbox" onClick={this.handleToggle(lang.desc)}/>
+                        <ListGroupItem key={lang.id}>
+                            <Input type="checkbox" onClick={this.handleToggle(lang.id)}/>
                             <Link to={`/languages/${lang.id}`}>{lang.desc}</Link>
                         </ListGroupItem>
                     ))
